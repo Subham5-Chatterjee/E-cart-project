@@ -44,72 +44,91 @@
       </div>
     </div>
 
-    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+    <header>
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <img src="images/logo.png" alt="Logo" class="img-fluid site-logo" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarContent"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="row">
+          <div class="col-12">
+            <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+              <div class="container-fluid">
+                <a
+                  class="navbar-brand d-flex align-items-center"
+                  href="index.html"
+                >
+                  <img
+                    src="images/logo.png"
+                    alt="Logo"
+                    class="img-fluid site-logo"
+                  />
+                </a>
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarContent"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <div class="collapse navbar-collapse" id="navbarContent">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="product-listing.html">Shop</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link" href="#sale_live">Product</a>
-              <!-- <ul class="dropdown-menu">
+                <div class="collapse navbar-collapse" id="navbarContent">
+                  <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="product-listing.html">Shop</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link" href="#sale_live">Product</a>
+                      <!-- <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Product 1</a></li>
                             <li><a class="dropdown-item" href="#">Product 2</a></li>
                         </ul> -->
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+                <ul class="navbar-nav align-items-center header-icon">
+                  <button class="btn search-button" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                  <button class="icon-btn position-relative">
+                    <a href="wishlist.html">
+                      <i class="fa-regular fa-heart"></i
+                    ></a>
+                    <span
+                      class="badge bg-primary rounded-pill cart-badge"
+                      id="wishCount"
+                      >0</span
+                    >
+                  </button>
+                  <button class="icon-btn position-relative">
+                    <a href="cart.html"
+                      ><i class="fa-solid fa-cart-shopping"></i
+                    ></a>
+                    <span
+                      class="badge bg-primary rounded-pill cart-badge"
+                      id="cartCount"
+                      >0</span
+                    >
+                  </button>
+                  <button class="icon-btn user-btn">
+                    <i class="fa-regular fa-user"></i>
+                  </button>
+                </ul>
+              </div>
+            </nav>
+          </div>
         </div>
-        <ul class="navbar-nav align-items-center header-icon">
-          <button class="btn search-button" type="submit">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-          <button class="icon-btn position-relative">
-            <a href="wishlist.html"> <i class="fa-regular fa-heart"></i></a>
-            <span
-              class="badge bg-primary rounded-pill cart-badge"
-              id="wishCount"
-              >0</span
-            >
-          </button>
-          <button class="icon-btn position-relative">
-            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-            <span
-              class="badge bg-primary rounded-pill cart-badge"
-              id="cartCount"
-              >0</span
-            >
-          </button>
-          <button class="icon-btn user-btn">
-            <i class="fa-regular fa-user"></i>
-          </button>
-        </ul>
       </div>
-    </nav>
+    </header>
 
     <section class="p_details-page mt-5">
       <div class="container">
