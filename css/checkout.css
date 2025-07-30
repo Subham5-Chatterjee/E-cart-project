@@ -1,100 +1,103 @@
 .billing_details_info h4 {
-    font-size: 36px;
-    font-weight: 500;
+  font-size: 36px;
+  font-weight: 500;
 }
 
 .billing_details_info label {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .billing_details_info label sup {
-    color: red;
+  color: red;
 }
 
 .billing_details_info .form-control {
-    height: 48px;
-    border: 1px solid #EBEBEB;
-    border-radius: 5px;
+  height: 48px;
+  border: 1px solid #ebebeb;
+  border-radius: 5px;
 }
 
 .payment_details_info {
-    background-color: #FBFBFB;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
+  background-color: #fbfbfb;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
 }
 
 .payment_details_info .form-check {
-    background: #fff;
-    display: flex;
-    align-items: center;
-    border: 1px solid #ebebeb;
-    border-radius: 5px;
-    padding: 5px 0px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ebebeb;
+  border-radius: 5px;
+  padding: 5px 0px;
 }
 
 .payment_details_info .form-check-label {
-    max-width: 600px;
-    width: 100%;
-    color: #555555;
+  max-width: 600px;
+  width: 100%;
+  color: #555555;
 }
 
 .form-check .form-check-input {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .form-section {
-    background-color: #FBFBFB;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
+  background-color: #fbfbfb;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
 }
 
 .order-summary {
-    background-color: #FBFBFB;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
+  background-color: #fbfbfb;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
 }
 
 .order-summary h5 {
-    font-size: 22px;
+  font-size: 22px;
 }
 
 .total-price {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .form-check-input:checked {
-    background-color: #000;
-    border-color: #000;
+  background-color: #000;
+  border-color: #000;
 }
 
 .p-details p {
-    max-width: 325px;
-    width: 100%;
-    margin-bottom: 15px;
-    color: #9F9F9F;
+  max-width: 325px;
+  width: 100%;
+  margin-bottom: 15px;
+  color: #9f9f9f;
 }
 
 .sub-details {
-    margin-bottom: 15px;
-    font-size: 18px;
+  margin-bottom: 15px;
+  font-size: 18px;
 }
 
 .shipping_info {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .total_value {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .policy_info {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .checkout_order_btn {
-    padding: 15px 0px;
-    font-size: 24px;
+  padding: 10px 0px;
+  font-size: 22px;
+}
+.form-control:focus {
+  box-shadow: none;
 }

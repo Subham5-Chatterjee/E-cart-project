@@ -433,6 +433,82 @@ body {
 .mySwiper-product {
   padding: 10px 0px;
 }
+/* cart page */
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-width: 33%;
+  width: 100%;
+}
+
+.quantity-selector button {
+  width: 44px;
+  height: 44px;
+  border: none;
+  background-color: transparent;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quantity-selector .btn-minus {
+  border-right: 1px solid #ccc;
+}
+
+.quantity-selector .btn-plus {
+  border-left: 1px solid #ccc;
+}
+
+.quantity-selector .btn-plus {
+  /*background-color: #3b4ffe;*/
+  color: #000;
+}
+
+.text-muted.strike {
+  text-decoration: line-through;
+}
+
+.quantity-selector input {
+  width: 70px;
+  text-align: center;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.quantity-selector input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.cart-item {
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+}
+
+.cart-total-box {
+  border: 1px solid #0000002d;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.cart-total-box .btn {
+  width: 100%;
+  padding: 10px 0px;
+  font-size: 22px;
+}
+
+.cart_image {
+  width: 65px;
+  /*width: 100%;*/
+}
+
+.cart_product_info {
+  width: 250px;
+}
 @media (min-width: 1740px) {
   .container,
   .container-lg,
