@@ -337,7 +337,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .map((item) => {
           return `<div class="col-md-4 col-lg-3">
                   <div class="card new-product-card" id="productList">
-                    <a href="/product-details.html" onclick='viewProduct(${JSON.stringify(
+                    <a href="product-details.html" onclick='viewProduct(${JSON.stringify(
                       item
                     )})'><img src="${
             item.thumbnail_image
