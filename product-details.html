@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Responsive Header</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/header-footer.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/product-details.css" type="text/css" />
+    <link rel="stylesheet" href="css/responsive.css" type="text/css" />
+  </head>
+
+  <body>
+    <div class="top-bar">
+      <div class="container">
+        <p>
+          Summer Sale For All Product And Free Express Delivery - OFF 50%!
+          <a href="#" class="text-white fw-bold ms-1">ShopNow</a>
+        </p>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="images/logo.png" alt="Logo" class="img-fluid site-logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product-listing.html">Shop</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#sale_live">Product</a>
+              <!-- <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Product 1</a></li>
+                            <li><a class="dropdown-item" href="#">Product 2</a></li>
+                        </ul> -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <ul class="navbar-nav align-items-center header-icon">
+          <button class="btn search-button" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <button class="icon-btn position-relative">
+            <a href="wishlist.html"> <i class="fa-regular fa-heart"></i></a>
+            <span
+              class="badge bg-primary rounded-pill cart-badge"
+              id="wishCount"
+              >0</span
+            >
+          </button>
+          <button class="icon-btn position-relative">
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <span
+              class="badge bg-primary rounded-pill cart-badge"
+              id="cartCount"
+              >0</span
+            >
+          </button>
+          <button class="icon-btn">
+            <i class="fa-regular fa-user"></i>
+          </button>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="p_details-page mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="slider-wrapper">
+              <div class="swiper main-slider mb-3">
+                <div class="swiper-wrapper"></div>
+                <!-- Navigation buttons -->
+                <div class="swiper-button-next main-swiper-next"></div>
+                <div class="swiper-button-prev main-swiper-prev"></div>
+              </div>
+
+              <div class="swiper thumbnail-slider">
+                <div class="swiper-wrapper"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="product_details-wrapper">
+              <h4>
+                <strong id="product-title"></strong>
+              </h4>
+              <p class="rating_info">
+                <span>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <span class="rating mt-0" id="rating">
+                    <small class="text-muted"> </small>
+                  </span>
+                  <span class="text-success ms-2" id="availability"
+                    >| In Stock</span
+                  >
+                </span>
+              </p>
+              <h6 class="p-description" id="longDescription"></h6>
+              <div class="d-flex">
+                <p
+                  class="price-tag regularprice text-decoration-line-through"
+                  id="product-price-regular"
+                ></p>
+                <p class="price-tag saleprice" id="product-price-sale"></p>
+              </div>
+              <!--<div class="d-flex gap-2 mb-3">
+                            <span class="badge text-bg-success">FREE SHIPPING</span>
+                            <span class="badge text-bg-danger">FREE GIFT</span>
+                        </div>-->
+
+              <!-- Quantity and Buttons -->
+              <div class="d-flex align-items-center mb-3 quantity_wrapper">
+                <!-- <div class="quantity-selector">
+                                <button class="btn-minus">-</button>
+                                <input type="text" value="1" id="quantity" readonly />
+                                <button class="btn-plus">+</button>
+                            </div> -->
+                <div class="quantity-selector">
+                  <select id="qtySelect">
+                    <option value="">Select Quantity</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+                <div class="addtocart_btn">
+                  <button class="btn btn-primary cart_btn" id="addToCartBtn">
+                    Add to Cart
+                  </button>
+                </div>
+                <!-- <div class=""><button class="btn btn-outline-primary buy-btn">Buy Now</button></div>-->
+                <!--
+                            <div class="">
+                                <button class="btn btn-outline-secondary">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                            </div>
+-->
+              </div>
+
+              <!-- Info Boxes -->
+              <div class="info-box">
+                <div class="d-flex">
+                  <p><img src="images/icon-delivery.svg" /></p>
+                  <p>
+                    <strong>Free Delivery</strong><br /><small
+                      >Enter your postal code for Delivery Availability</small
+                    >
+                  </p>
+                </div>
+                <hr />
+                <div class="d-flex">
+                  <p><img src="images/Icon-return.png" /></p>
+                  <p>
+                    <strong>Return Delivery</strong><br /><small
+                      >Free 30 Days Delivery Returns.
+                      <a href="#">Details</a></small
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row pt-5">
+          <div class="col-12">
+            <ul class="nav nav-tabs gap-2" id="productTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="desc-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#desc"
+                  type="button"
+                  role="tab"
+                >
+                  Description
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="return-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#return"
+                  type="button"
+                  role="tab"
+                >
+                  Reviews<span id="counting_tab">(150)</span>
+                </button>
+              </li>
+            </ul>
+
+            <div class="tab-content" id="productTabContent">
+              <!-- Product Description -->
+              <div
+                class="tab-pane fade show active"
+                id="desc"
+                role="tabpanel"
+                aria-labelledby="desc-tab"
+              >
+                <p id="longDescription_tab">
+                  A key objective is engaging digital marketing customers and
+                  allowing them to interact with the brand through servicing and
+                  delivery of digital media. Information is easy to access at a
+                  fast rate through the use of digital communications.
+                </p>
+              </div>
+
+              <!-- Return Policy -->
+              <div
+                class="tab-pane fade"
+                id="return"
+                role="tabpanel"
+                aria-labelledby="return-tab"
+              >
+                <p id="rating_tab">
+                  A key objective is engaging digital marketing customers and
+                  allowing them to interact with the brand through servicing and
+                  delivery of digital media. Information is easy to access at a
+                  fast rate through the use of digital communications.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="common_popular">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h5 class="">
+            Best Selling
+            <strong><span class="underline_text">Products</span></strong>
+          </h5>
+          <a href="product-listing.html" class="text-decoration-none"
+            >More Products <i class="bi bi-arrow-right-circle"></i
+          ></a>
+        </div>
+
+        <div class="swiper mySwiper-product">
+          <div class="swiper-wrapper" id="bestSellingProduct">
+            <!-- Best Selling Products will be dynamically inserted here -->
+          </div>
+
+          <!-- Navigation buttons -->
+          <div class="swiper-button-next product-swiper-next"></div>
+          <div class="swiper-button-prev product-swiper-prev"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer text-white pt-5">
+      <div class="newsletter_part">
+        <div class="container">
+          <!-- Newsletter -->
+          <div class="row text-center text-md-start align-items-center">
+            <div class="col-md-6 mb-3 mb-md-0">
+              <h4>
+                Subscribe our Newsletter and get <strong>30%</strong> discount
+                for your <strong>First</strong> order
+              </h4>
+            </div>
+            <div class="col-md-6">
+              <form
+                class="d-flex flex-column flex-sm-row gap-2 position-relative"
+              >
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Enter Your email"
+                  required
+                />
+                <button
+                  type="submit"
+                  class="submit-btn input__field_form_button"
+                >
+                  Submit Now
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="news_hr"></div>
+      </div>
+
+      <!-- Footer Links -->
+      <div class="footer_part">
+        <div class="container">
+          <div class="row text-start">
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-5 col-md-5">
+                  <div class="footer-logo">
+                    <img
+                      src="images/logo-white.png"
+                      alt="Ecart logo"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <p class="mt-2 footer-text">
+                    Stay connected for updates, exclusive offers, and more:
+                  </p>
+                  <div class="social-icons mt-3">
+                    <a href="#"
+                      ><img src="images/ins.png" alt="" class="img-fluid"
+                    /></a>
+                    <a href="#"
+                      ><img src="images/facebook'.png" alt="" class="img-fluid"
+                    /></a>
+                    <a href="#"
+                      ><img src="images/tictok.png" alt="" class="img-fluid"
+                    /></a>
+                  </div>
+                </div>
+                <div class="col-7 col-md-7">
+                  <h6 class="footer_head">About Ecart</h6>
+                  <p class="footer-text">
+                    Ecart is your trusted online destination for quality
+                    products at unbeatable prices. From mobile to home
+                    essentials & gadgets, we bring you a seamless shopping
+                    experience backed by fast delivery and top-notch customer
+                    support.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row mt-4 mt-md-0">
+                <div class="col-4 col-md-4">
+                  <h6 class="footer_head">Legal</h6>
+                  <ul class="list-unstyled">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                  </ul>
+                </div>
+
+                <div class="col-4 col-md-4">
+                  <h6 class="footer_head">Service</h6>
+                  <ul class="list-unstyled">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Returns & Refunds</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                  </ul>
+                </div>
+
+                <div class="col-4 col-md-4">
+                  <h6 class="footer_head">Quick Links</h6>
+                  <ul class="list-unstyled">
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Best Sellers</a></li>
+                    <li><a href="#">Today's Deals</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom text-center mt-4">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 text-center copyText">
+                &copy; 2025 Ecart. All Rights Reserved.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/custom.js"></script>
+
+    <script>
+      const swiper_one = new Swiper(".mySwiper-product", {
+        loop: true,
+        slidesPerView: 1.3,
+        spaceBetween: 20,
+        breakpoints: {
+          560: {
+            slidesPerView: 2.2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2.2,
+            spaceBetween: 20,
+          },
+          992: {
+            slidesPerView: 3.2,
+            spaceBetween: 20,
+          },
+          1200: {
+            slidesPerView: 4.5,
+            spaceBetween: 20,
+          },
+        },
+        navigation: {
+          nextEl: ".product-swiper-next",
+          prevEl: ".product-swiper-prev",
+        },
+      });
+    </script>
+
+    <script>
+      // Get product data from localStorage
+      const product = JSON.parse(localStorage.getItem("singleProduct"));
+
+      console.log(product);
+
+      // Set product title
+      document.getElementById("product-title").textContent = product?.name;
+      document.getElementById("rating").textContent = product?.review?.rating
+        ? `${product.review.rating.toFixed(1)}(${
+            product.review?.count
+          } Reviews) `
+        : "No reviews yet";
+      document.getElementById("availability").textContent = product?.stock
+        ? "| In Stock"
+        : "| Out of Stock";
+
+      // Set prices
+      document.getElementById(
+        "product-price-regular"
+      ).textContent = `$${product?.regular_price}`;
+      document.getElementById(
+        "product-price-sale"
+      ).textContent = `$${product?.sale_price}`;
+
+      // Set short description
+      document.getElementById("longDescription").textContent =
+        product?.long_description;
+      // Set long description in tab
+      document.getElementById("longDescription_tab").textContent =
+        product?.long_description;
+      // Set rating in tab
+      document.getElementById("rating_tab").textContent = product?.review
+        ?.rating
+        ? `Rated: ${product.review.rating.toFixed(1)} stars`
+        : "No reviews yet";
+      // Set counting in tab
+      document.getElementById("counting_tab").textContent = `(${
+        product.review?.count || 0
+      })`;
+      // Always fetch fresh cart data
+      const getCart = () => JSON.parse(localStorage.getItem("cart")) || [];
+      const cartCounter = document.getElementById("cartCount");
+
+      const qtySelect = document.getElementById("qtySelect");
+
+      // Clear and populate options
+      qtySelect.innerHTML = "<option value=''>Select Quantity</option>";
+      for (let i = 1; i <= 5; i++) {
+        qtySelect.innerHTML += `<option value="${i}">${i}</option>`;
+      }
+
+      // Show previously selected quantity if product is in cart
+      const savedCart = getCart();
+      const existingInCart = savedCart.find((item) => item.id === product.id);
+      if (existingInCart && existingInCart.quantity <= product.quantity) {
+        qtySelect.value = existingInCart.quantity;
+      }
+
+      // Handle Add to Cart click
+      document.getElementById("addToCartBtn").addEventListener("click", () => {
+        const selectedQty = parseInt(qtySelect.value);
+        if (!selectedQty || selectedQty < 1) {
+          alert("Please select a quantity.");
+          return;
+        }
+
+        const updatedCart = getCart();
+
+        const index = updatedCart.findIndex((item) => item.id === product.id);
+
+        if (index > -1) {
+          // Update quantity
+          updatedCart[index].quantity = selectedQty;
+        } else {
+          // Add new product
+          updatedCart.push({
+            ...product,
+            quantity: selectedQty,
+          });
+        }
+
+        // location.reload();
+        cartCounter.textContent = updatedCart.length;
+        localStorage.setItem("cart", JSON.stringify(updatedCart));
+        alert("Product added to cart!");
+      });
+
+      // Image sliders
+      const mainSliderWrapper = document.querySelector(
+        ".main-slider .swiper-wrapper"
+      );
+      const thumbSliderWrapper = document.querySelector(
+        ".thumbnail-slider .swiper-wrapper"
+      );
+
+      mainSliderWrapper.innerHTML = "";
+      thumbSliderWrapper.innerHTML = "";
+
+      product.gallery.forEach((img) => {
+        mainSliderWrapper.innerHTML += `
+          <div class="swiper-slide">
+            <a href="${img}" target="_blank" class="thumbnail">
+              <img src="${img}" class="zoom" />
+            </a>
+          </div>
+        `;
+        thumbSliderWrapper.innerHTML += `
+          <div class="swiper-slide">
+            <img src="${img}" />
+          </div>
+        `;
+      });
+
+      // Description tab
+      //       document.querySelector(
+      //         "#nav-home"
+      //       ).innerHTML = `<p>${product?.long_description}</p>`;
+
+      //       // Reviews tab
+      //       document.querySelector("#nav-profile").innerHTML = `
+      //       <p>Rated: ${product?.review} stars</p>
+      //     `;
+
+      //       // Social Share Icons
+      //       const socialIcons = document.querySelector(".shareIcons ul");
+      //       socialIcons.innerHTML = "";
+
+      //       product.socialShare.social.forEach((item) => {
+      //         socialIcons.innerHTML += `
+      //     <li>
+      //       <a href="${item.url}" title="Share on ${item.title}" target="_blank" rel="noopener noreferrer">
+      //         <img src="${item.icon}" class="img-fluid" alt="${item.title}" />
+      //       </a>
+      //     </li>
+      //   `;
+
+      //Related products
+
+      document.addEventListener("DOMContentLoaded", async function () {
+        const currentProduct = JSON.parse(
+          localStorage.getItem("singleProduct")
+        );
+
+        try {
+          const res = await fetch("data/product.json");
+          const products = await res.json();
+
+          // console.log("All", products);
+
+          // Optional: Filter related products (e.g., same category or different from current)
+          const bestSellingProducts = products?.products
+            .filter(
+              (product) => product?.best_seller === true // simple filter
+            )
+            .slice(0, 6); // limit to 4
+
+          // console.log("Best Selling", bestSellingProducts);
+
+          const bestSellingContainer =
+            document.getElementById("bestSellingProduct");
+
+          const bstSellingHTML = bestSellingProducts
+            .map((item) => {
+              return `<div class="swiper-slide" key=${item?.id}>
+                <div class="card new-product-card">
+                    <a href="product-details.html" onclick='viewProduct(${JSON.stringify(
+                      item
+                    )})'><img src=${
+                item?.thumbnail_image
+              } class="product-image" alt=${item?.name}></a>
+
+                    <div class="card-body">
+          <a href="product-details.html" class="text-decoration-none" onclick='viewProduct(${JSON.stringify(
+            item
+          )})'><h6 class="text-primary text-left text-truncate" style="max-width: 250px;">${
+                item?.name
+              }</h6></a>
+                        <div class="hr"></div>
+                        <div class="price d-flex justify-content-between align-items-start">
+                            <div class="left_price_details text-start">
+                                <h5>$${item?.sale_price}</h5>
+                                <div>
+                                    <span class="price-old">$${
+                                      item?.regular_price
+                                    }</span>
+                                    <span class="price-discount">${
+                                      item?.discount
+                                    }</span>
+                                </div>
+                            </div>
+                            <div class="right_price_details">
+                                <div class="rating mt-0">
+                                    <i class="bi bi-star-fill"></i>
+
+                                    <small class="text-muted">${
+                                      item?.review?.rating
+                                    }</small>
+                                </div>
+                                <div class="d-flex justify-content-end mt-2 gap-2">
+                                    <button class="btn btn-outline-primary icon-btnp" onclick="addToCart('${
+                                      item.id
+                                    }')">
+                                        <i class="bi bi-bag"></i>
+                                    </button>
+                                    <button class="btn btn-outline-secondary icon-btnp" onclick="wishList('${
+                                      item.id
+                                    }')">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>`;
+            })
+            .join("");
+          bestSellingContainer.innerHTML = bstSellingHTML;
+        } catch (err) {
+          console.error("Error loading products:", err);
+        }
+      });
+    </script>
+    <script>
+      const thumbSlider = new Swiper(".thumbnail-slider", {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+
+      const mainSlider = new Swiper(".main-slider", {
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".main-swiper-next",
+          prevEl: ".main-swiper-prev",
+        },
+        thumbs: {
+          swiper: thumbSlider,
+        },
+      });
+
+      // mainSlider.controller.control = thumbSlider;
+      // thumbSlider.controller.control = mainSlider;
+    </script>
+  </body>
+</html>

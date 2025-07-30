@@ -1,0 +1,77 @@
+ p.order_id {
+     font-size: 14px;
+     color: #777777;
+     margin-bottom: 5px;
+ }
+
+ p.customer_name {
+     font-size: 25px;
+     max-width: 450px;
+     width: 100%;
+     text-overflow: ellipsis;
+     font-weight: 600;
+ }
+
+ h3.order_det_heading {
+     font-weight: 600;
+     font-size: 22px;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+ }
+
+ .ship_address_det h4,
+ .ship_method_det h4,
+ .bill_address_det h4,
+ .payment_method_det h4 {
+     font-weight: 600;
+     font-size: 20px;
+ }
+
+ .ship_address_det p,
+ .ship_method_det p,
+ .bill_address_det p,
+ .payment_method_det p {
+     font-size: 18px;
+     color: #777777;
+     line-height: 20px;
+     margin-bottom: 8px;
+ }
+
+ .shopping_btn {
+     max-width: 215px;
+     height: 50px;
+     font-size: 16px;
+     border-radius: 7px;
+     width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+ }
+
+ i.fa.fa-question-circle {
+     font-size: 25px;
+     color: #696969;
+     vertical-align: middle;
+     margin-right: 5px;
+ }
+
+ p.help_link {
+     font-size: 14px;
+     color: #696969;
+     font-weight: bold;
+ }
+
+
+ @media (max-width: 450px) {
+     .payment_br {
+         display: none;
+     }
+
+     i.fa.fa-question-circle {
+         vertical-align: top;
+     }
+
+     p.help_link a {
+         display: block;
+     }
+ }
