@@ -337,15 +337,17 @@ document.addEventListener("DOMContentLoaded", function () {
         .map((item) => {
           return `<div class="col-md-4 col-lg-3">
                   <div class="card new-product-card" id="productList">
-                    <a href="product-details.html" onclick='viewProduct(${JSON.stringify(
+                    <a class="text-decoration-none" href="product-details.html" onclick='viewProduct(${JSON.stringify(
                       item
-                    )})'><img src="${
+                    )})'> <img src="${
             item.thumbnail_image
           }" class="product-image" alt="${item.name}"></a>
                     <div class="card-body">
-                        <h6 class="text-primary text-left text-truncate" style="max-width: 250px;">${
-                          item.name
-                        }</h6>
+                       <a class="text-decoration-none" href="product-details.html" onclick='viewProduct(${JSON.stringify(
+                         item
+                       )})'> <h6 class="text-primary text-left text-truncate" style="max-width: 250px;">${
+            item.name
+          }</h6></a>
                         <div class="hr"></div>
                         <div class="price d-flex justify-content-between align-items-start">
                             <div class="left_price_details text-start">

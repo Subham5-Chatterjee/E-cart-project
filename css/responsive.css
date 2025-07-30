@@ -53,6 +53,18 @@
   .testimonial__card p {
     min-height: 160px;
   }
+  .live_sale_part {
+    padding-bottom: 40px;
+  }
+  .exp-category {
+    padding-top: 40px;
+  }
+  .common_popular {
+    padding: 40px 0px;
+  }
+  .review_part {
+    padding: 0px 0 40px;
+  }
 }
 
 @media (max-width: 1399.98px) {
