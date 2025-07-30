@@ -232,7 +232,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="col-12 text-center py-5">
           <img src="images/cart.png" alt="Empty Cart" style="max-width: 150px; opacity: 0.6;" />
           <h4 class="mt-3">Your cart is empty</h4>
-          <a href="/" class="btn btn-outline-dark mt-3">Continue Shopping</a>
+          <a href="index.html" class="btn btn-outline-dark mt-3">Continue Shopping</a>
         </div>
       </div></td>
     `;
@@ -402,7 +402,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .map((product) => {
       return `<div class="col-12 col-md-4 col-lg-3 mb-4">
           <div class="card new-product-card">
-            <a href="/product-details.html">
+            <a href="product-details.html">
               <img src="${product.thumbnail_image}" class="product-image" alt="${product.name}">
             </a>
             <div class="card-body">
